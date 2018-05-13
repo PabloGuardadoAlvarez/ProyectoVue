@@ -1,4 +1,6 @@
 import firebase from 'firebase'
+import {EventBus} from "../../Events/Events_Bus";
+
 
 export default {
   name: 'login-register',
@@ -15,7 +17,7 @@ export default {
         lpsw: "",
     }
   },
-  beforeCreated: function(){
+  created: function(){
 
     firebase.auth().onAuthStateChanged((user) =>{
       if (user){
@@ -23,6 +25,7 @@ export default {
       }else{
         this.props_BlIsloggedIn = false
       }
+      EventBus.$emit('loginregister_userstatechabged', this.props_BlIsloggedIn)
     });
   },
   computed: {
@@ -57,7 +60,13 @@ export default {
             alert("Te has logeado con exito");
           }
 
+
+
 );
 },
+    Logout : function(event) {
+
+        firebase.auth().signOut()
+    },
   }
 }

@@ -7,10 +7,24 @@ import firebase from'firebase'
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-
-Vue.config.productionTip = false
-
+import props from './mixins/props'
 /* eslint-disable no-new */
+
+
+
+// Initialize Firebase
+var config = {
+  apiKey: 'AIzaSyDLj8-0ppaAjwqm7YJAQ8xjESTDlQXnWeU',
+  authDomain: 'mi-super-proyecto-2af44.firebaseapp.com',
+  databaseURL: 'https://mi-super-proyecto-2af44.firebaseio.com',
+  projectId: 'mi-super-proyecto-2af44',
+  storageBucket: 'mi-super-proyecto-2af44.appspot.com',
+  messagingSenderId: '396472016768'
+};
+firebase.initializeApp(config);
+
+Vue.mixin(props)
+
 new Vue({
   el: '#app',
   router,
@@ -18,13 +32,3 @@ new Vue({
   template: '<App/>'
 })
 
-  // Initialize Firebase
-  var config = {
-    apiKey: 'AIzaSyDLj8-0ppaAjwqm7YJAQ8xjESTDlQXnWeU',
-    authDomain: 'mi-super-proyecto-2af44.firebaseapp.com',
-    databaseURL: 'https://mi-super-proyecto-2af44.firebaseio.com',
-    projectId: 'mi-super-proyecto-2af44',
-    storageBucket: 'mi-super-proyecto-2af44.appspot.com',
-    messagingSenderId: '396472016768'
-  };
-  firebase.initializeApp(config);
