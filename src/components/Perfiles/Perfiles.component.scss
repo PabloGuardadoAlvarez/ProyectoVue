@@ -1,3 +1,21 @@
 .perfiles {
+  .Coche{
+
+    box-shadow: 11px 6px 54px 7px rgba(0,0,0,0.45);
+    margin: 15px;
+    transition: 10s all ease-in-out;
+
+    &:hover{
+      transform: scale(1,1);
+    }
+    a{
+      text-decoration: none;
+      color: white;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
 
 }

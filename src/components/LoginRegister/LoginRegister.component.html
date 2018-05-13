@@ -20,8 +20,16 @@
 
     <div class="panellogin" v-show=!bllogin>
       <h1>Register</h1>
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+      <label for="nick"><b>Nick</b></label>
+      <input type="text" placeholder="Enter Nick" name="Nick" v-model="rnick" required>
+      <br>
+      <br>
+      <label for="FDN"><b>Fecha De Nacimiento</b></label>
+      <input type="date" placeholder="Enter Data of Birth" name="FDN" v-model="rfdn" required>
+      <br>
+      <br>
+      <label for="nombre"><b>Nombre</b></label>
+      <input type="text" placeholder="Enter name" name="nombre" v-model="rnombre" required>
 
       <label for="email"><b>email</b></label>
       <input type="text" placeholder="Enter email" name="email" v-model="remail" required>

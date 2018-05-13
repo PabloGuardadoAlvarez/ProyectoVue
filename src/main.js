@@ -2,7 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 
 import firebase from'firebase'
-
+import firestore from  'firebase/firestore'
 
 import Vue from 'vue'
 import App from './App'
@@ -22,7 +22,8 @@ var config = {
   messagingSenderId: '396472016768'
 };
 firebase.initializeApp(config);
-
+Vue.use(firebase)
+Vue.use(firestore)
 Vue.mixin(props)
 
 new Vue({
