@@ -2,6 +2,7 @@
 <section class="perfiles">
 
   <div class="Coche" v-for="ch in Perfiles ">
+
     <div class="tarjetaReview">
       <h2 class="nombre">{{ch.nombre}}</h2>
       <img class="foto" :src="ch.foto" alt="noLogoAviable">
@@ -12,6 +13,7 @@
         <h4 class="precio">{{ch.precio}}</h4>
       </div>
       <p class="review">{{ch.review}}</p>
+
     </div>
   </div>
 </section>

@@ -1,12 +1,35 @@
 .login-register {
 
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+
   h1{
 font-size: 22px;
 
   }
 
-  background-color: #0095a8;
-  border-radius: 20px;
+  box-shadow: 11px 6px 54px 7px rgba(0,0,0,0.45);
 
   input[type=text], input[type=password] {
       width: 100%;
@@ -22,7 +45,7 @@ font-size: 22px;
   button {
       opacity: 0.5;
       background-color: #26c6da;
-      color: white;
+      color: black;
       padding: 14px 20px;
       margin: 8px 0;
       border: none;

@@ -1,5 +1,4 @@
-
-<section class="login-register">
+<section class="login-register" xmlns:v-on="http://www.w3.org/1999/xhtml">
 
   <div class="NotLogged" v-show="!this.props_BlIsloggedIn">
 
@@ -47,8 +46,13 @@
   </div>
 
   <div class="Logged" v-show="this.props_BlIsloggedIn">
+    <ul>
+      <li><button type="submit">Home</button></li>
+      <li><button type="submit">Añadir</button></li>
+      <li><button type="submit">Ajustes</button></li>
+      <li style="float:right"><button type="submit"  v-on:click="Logout">Logout</button></li>
+    </ul>
 
-    <button type="submit"  v-on:click="Logout">Logout</button>
 
   </div>
 

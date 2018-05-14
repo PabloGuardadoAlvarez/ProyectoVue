@@ -16,7 +16,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  background-image: url("https://i.pinimg.com/originals/5e/67/ce/5e67ce5ddb7ff31753a4e11830258eae.jpg");
   margin-top: 60px;
 }
 </style>
