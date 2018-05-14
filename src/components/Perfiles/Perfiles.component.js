@@ -6,8 +6,12 @@ class Perfil {
     this.id = id
     this.marca = datos.marca
     this.modelo = datos.modelo
-    this.año = datos.año
+    this.fechaCompra = datos.fechaCompra
     this.foto = datos.foto
+    this.categoria = datos.categoria
+    this.nombre = datos.nombre
+    this.precio = datos.precio
+    this.review = datos.review
 
     console.log("Nomobre marca:"+ this.marca)
   }
@@ -42,7 +46,7 @@ export default {
   methods: {
     DescargarPerfiles:function(){
       var that=this
-      firebase.firestore().collection("Coches").onSnapshot(function(querySnapshot) {
+      firebase.firestore().collection("reviews").onSnapshot(function(querySnapshot) {
         that.Perfiles=[]
         querySnapshot.forEach(function(doc) {
           // doc.data() is never undefined for query doc snapshots

@@ -3,19 +3,79 @@
 
     box-shadow: 11px 6px 54px 7px rgba(0,0,0,0.45);
     margin: 15px;
-    transition: 10s all ease-in-out;
+   transition: 0.8s all ease-in-out;
+    .tarjetaReview{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "nombre nombre nombre"
+                            "foto foto info"
+                            "foto foto info"
+                            "review review review";
+      .info{
+        grid-area: info;
+        display: grid;
+        grid-template-columns: 5em 5em;
+        grid-template-areas: "marca modelo"
+                              "categoria precio";
+      }
+      .nombre{
 
-    &:hover{
-      transform: scale(1,1);
+        grid-area: nombre;
+        display: block;
+
+        margin: 5%;
+
+      }
+      .foto{
+        grid-area: foto;
+        margin-left: 25%;
+        margin-bottom: 5%;
+        width: 50%;
+      }
+      .marca{
+        grid-area: marca;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+      }
+      .modelo{
+        grid-area: modelo;
+        display: flex;
+        align-items: center;
+        justify-content: center;}
+      .categoria{
+        grid-area: categoria;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .precio{
+        grid-area: precio;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .review{
+        color: blanchedalmond;
+        grid-area: review;
+        display: none;
+      }
+      h2, h4{
+        color: blanchedalmond;
+      }
     }
-    a{
-      text-decoration: none;
-      color: white;
-      font-size: 15px;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-    }
+
+   &:hover{
+
+   transform: scale(1.3);
+   .review{
+     transition: 0.8s all ease-in-out;
+     display: initial;
+
+   }
+   }
+
   }
 
 }
